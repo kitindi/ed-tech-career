@@ -1,0 +1,32 @@
+{% extends 'base.html' %} {% block content %}
+<main>
+  <div class="w-full">
+    <header class="w-full max-w-5xl h-16 mx-auto flex flex-row items-center justify-between py-4">
+      <a href="" class="text-2xl font-bold text-[#E6165C]">Ed & Tech Career</a>
+      <nav>
+        <ul class="flex items-center gap-4">
+          <li><a href="" class="text-[16px] font-semibold">Career Advice</a></li>
+          <li><a href="" class="text-[16px] font-semibold">Blog</a></li>
+          <!-- <li><a href="" class="text-white font-semibold text-[16px] px-8 py-2 rounded-lg bg-[#E6165C]">Sign Up</a></li> -->
+        </ul>
+      </nav>
+    </header>
+    <div class="w-full max-w-5xl mx-auto h-screen">
+      <div class="w-full max-w-4xl mx-auto h-[350px] flex justify-center py-24">
+        <div>
+          <h1 class="text-5xl font-bold text-center py-2">Where Tech enthusists & Educators find their next Hire</h1>
+          <div class="flex items-center justify-center gap-10 my-8">
+            <button class="text-white text-[16px] bg-[#E6165C] hover:bg-[#E6165C]/90 px-8 py-2.5 rounded-lg">Discover Jobs</button>
+            <button class="text-black text-[16px] rounded-md border border-[#E6165C] px-8 py-2.5 hover:bg-[#E6165C] hover:text-white">Find Talent</button>
+          </div>
+        </div>
+      </div>
+      <div class="hidden w-full h-96 md:block">
+        <div class="w-full max-w-[700px] mx-auto h-full">
+          <img src="{{url_for('static', filename="images/banner.jpeg")}}" alt="" class="w-full rounded-lg object-cover h-96">
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock content %}
