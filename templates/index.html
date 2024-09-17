@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% block content %}
 <main class="px-8">
   <div class="w-full">
-    <header class="w-full max-w-5xl h-16 mx-auto flex flex-row items-center justify-between py-4">
+    <header class="w-full max-w-6xl h-16 mx-auto flex flex-row items-center justify-between py-4">
       <a href="" class="text-2xl font-bold text-[#E6165C]">EdTech Career</a>
       <nav>
         <ul class="flex items-center gap-4">
@@ -11,9 +11,9 @@
         </ul>
       </nav>
     </header>
-    <div class="w-full max-w-5xl mx-auto h-screen">
+    <div class="w-full max-w-6xl mx-auto h-screen">
       <div class="w-full max-w-4xl mx-auto h-[350px] flex justify-center py-24">
-        <div class="max-w-[600px]">
+        <div class="max-w-[700px]">
           <h1 class="text-4xl text-center font-bold py-2 leading-tight">Where Tech Talents & Educators find their Dream Job</h1>
           <p class="py-4"></p>
           <div class="flex items-center justify-center gap-10 my-8">
@@ -25,14 +25,14 @@
         </div>
       </div>
       <div class="hidden w-full h-[500px] md:block">
-        <div class="w-full max-w-[700px] mx-auto h-full">
+        <div class="w-full max-w-[800px] mx-auto h-full">
           <img src="{{url_for('static', filename="images/banner.jpeg")}}" alt="" class="w-full rounded-lg object-cover h-96">
         </div>
       </div>
     </div>
   </div>
   <!-- Job listing -->
-  <div class="w-full max-w-5xl mx-auto py-32 mt-5" id="job-list">
+  <div class="w-full max-w-6xl mx-auto py-24 mt-5" id="job-list">
     <div>
       <h2 class="text-[22px] font-semibold text-center">Discover your dream job opportunities</h2>
       <!-- filters -->
@@ -40,24 +40,17 @@
         <form action="">
           <div class="flex items-center justify-center gap-4 mt-8">
             <div>
-              <label for="job-type" class="text-[16px] font-semibold">Job Type</label>
-              <select name="job-type" id="job-type" class="w-56 px-4 py-2 border border-[#E6165C] rounded-lg">
-                <option value="full-time">Full Time</option>
-                <option value="part-time">Part Time</option>
-                <option value="contract">Contract</option>
-              </select>
+              <label for="job-location" class="text-[16px] font-semibold">Job Title</label>
+              <input name="job_title" id="job_title" class="w-56 px-4 py-2 border border-[#E6165C] rounded-lg" placeholder="Junior UX Designer" />
             </div>
-            <!-- <div>
+
+            <div class="">
               <label for="job-location" class="text-[16px] font-semibold">Location</label>
-              <select name="job-location" id="job-location" class="w-48 px-4 py-2 border border-[#E6165C] rounded-lg">
-                <option value="lagos">Lagos</option>
-                <option value="abuja">Abuja</option>
-                <option value="portharcourt">Portharcourt</option>
-              </select>
-            </div> -->
+              <input name="job_location" id="job_location" class="w-56 px-4 py-2 border border-[#E6165C] rounded-lg" placeholder="Tanzania" />
+            </div>
             <div>
               <label for="job-category" class="text-[16px] font-semibold">Category</label>
-              <select name="job-category" id="job-category" class="w-56 px-4 py-2 border border-[#E6165C] rounded-lg">
+              <select name="job_category" id="job_category" class="w-56 px-4 py-2 border border-[#E6165C] rounded-lg">
                 <option value="education-teaching">Education & Teaching</option>
                 <option value="software-engineering">Software Engineering</option>
                 <option value="product-management">Product Management</option>
@@ -69,6 +62,36 @@
             </div>
           </div>
         </form>
+      </div>
+    </div>
+    <div>
+      <!-- Job card -->
+      <div class="w-full max-w-5xl mx-auto border border-gray-300 rounded-lg pt-8 pb-4 px-4">
+        <div class="">
+          <div class="grid grid-cols-12 gap-2">
+            <div class="col-span-9 flex items-start gap-4">
+              <img
+                src="https://w7.pngwing.com/pngs/477/150/png-transparent-illustrator-computer-icons-adobe-systems-logo-illustration-angle-text-trademark-thumbnail.png"
+                alt=""
+                class="w-10 h-10 object-cover rounded-full"
+              />
+              <div>
+                <p class="text-[14px] text-[#6B7280]">Google</p>
+                <h3 class="text-[15px] font-semibold">Junior UX Designer</h3>
+                <p class="text-[14px] text-[#6B7280]">Remote</p>
+                <div class="py-6 pr-4">
+                  <p class="text-[14px]">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum neque consectetur, modi voluptas enim minus tenetur incidunt ut deleniti
+                    deserunt illo placeat et ducimus beatae porro cumque omnis quos quia excepturi est iste, dicta maiores? Sunt voluptatibus, debitis dolores
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-span-3">
+              <a href="" class="text-[14px] text-white font-semibold bg-[#E6165C] hover:bg-[#E6165C]/90 px-4 py-2 rounded-md">Apply on employer site</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
